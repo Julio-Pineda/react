@@ -1,10 +1,11 @@
+import React from 'react'; //Se debe usar este, para que fragment funcione
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { TodoButton } from './TodoButton';
-import React from 'react'; //Se debe usar este, para que fragment funcione
-import './App.css';
+import './App.css'
+
 
 
 const defaultTodos = [
@@ -17,9 +18,10 @@ const defaultTodos = [
 
 function App() {
   return (
-    // <div className="App">
-
-    <React.Fragment>
+    // <div className="App"> Puedo encapsular en div
+    // <React.Fragment> Puedo encapsular en react fragment o puedo simplemente usar esas etiquetas vacias para encapsular
+    // <>
+    <div className="App">
       <TodoCounter completed={10} total={12}/>
       <TodoSearch/>
 
@@ -34,7 +36,9 @@ function App() {
       </TodoList>
 
        <TodoButton />
-    </React.Fragment>
+    </div>
+    //   </>
+    // </React.Fragment>
     // </div>
   );
 }

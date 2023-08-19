@@ -1,0 +1,14 @@
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 34px;
+    padding: 18px 48px;
+    background-color: black;
+    color: aqua;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    -webkit-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+}

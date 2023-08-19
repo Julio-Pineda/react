@@ -1,0 +1,24 @@
+button {
+    border-radius: 22px;
+    border: none;
+    padding: 8px 12px;
+    background-color: black;
+    color: aqua;
+    transition: transform 0.3s ease;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+button:hover {
+    background-color: aqua;
+    color: black;
+}
+
+button:active {
+    background-color: aqua;
+    color: black;
+    -webkit-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    transform: scale(1.2);
+}

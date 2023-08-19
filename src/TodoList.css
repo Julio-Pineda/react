@@ -1,0 +1,27 @@
+ul {
+    padding: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    width: 222px;
+    margin-top: 18px;
+    padding: 8px;
+    border: none;
+    border-radius: 22px;
+}
+
+li:hover {
+    background-color: aqua;
+    border: black solid 1px;
+    -webkit-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+    box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+}

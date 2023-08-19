@@ -1,6 +1,8 @@
+import './TodoButton.css';
+
 function TodoButton () {
     return (
-        <button>Crear nuevo evento</button>
+        <button>Crear tarea</button>
     );
 }
 
