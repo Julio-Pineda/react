@@ -2,20 +2,35 @@ ul {
     padding: 0;
 }
 
+.containerLi {
+    margin: 10px 0 0 0;
+    padding: 0;
+    height: auto;
+    display: block;
+}
+
 li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-color: lightgray;
     text-align: center;
     text-decoration: none;
     list-style: none;
     width: 222px;
-    margin-top: 18px;
+    height: 60px;
     padding: 8px;
     border: none;
     border-radius: 22px;
+    box-sizing: border-box;
+}
+
+li input {
+    padding: 0;
+    margin: 0 4px;
+    width: 14px;
+    
 }
 
 li:hover {
@@ -24,4 +39,11 @@ li:hover {
     -webkit-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
     -moz-box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
     box-shadow: 3px 14px 22px 4px rgba(0,0,0,0.62);
+}
+
+.x {
+    position: relative;
+    top: -70px;
+    left: 185px;
+    cursor: pointer;
 }

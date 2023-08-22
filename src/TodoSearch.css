@@ -4,18 +4,24 @@
     align-items: center;
     justify-content: center;
     width: 444px;
+    height: 30px;
 }
 
 input {
-    border-radius: 22px;
-    padding: 8px 12px;
-    background-color: lightgrey;
-    border: none;
-    text-align: center;
     width: 222px;
+    padding: 8px 12px;
+    border-radius: 22px;
+    background-color: lightgrey;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
 input:focus {
     background-color: aqua;
-    border: black solid 0.5px;
+    border: 1px black solid ;
+    -webkit-box-shadow: 3px 14px 22px 4px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 3px 14px 22px 4px rgba(0, 0, 0, 0.62);
+    box-shadow: 3px 14px 22px 4px rgba(0, 0, 0, 0.62);
 }

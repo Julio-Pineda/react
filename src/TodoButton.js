@@ -2,7 +2,16 @@ import './TodoButton.css';
 
 function TodoButton () {
     return (
-        <button>Crear tarea</button>
+        <button
+        // onClick={() => alert("Click")}
+        onClick={
+            (event) => {
+                console.log("click");
+                console.log(event);
+                console.log(event.target);
+            }
+        }
+        >Crear tarea</button>
     );
 }
 

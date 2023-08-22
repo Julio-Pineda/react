@@ -1,10 +1,13 @@
 function TodoItem(props) {
     return (
-      <li>
-        <span>✔</span>
-        <p>{props.text}</p>
-        <span>❌</span>
-      </li>
+      <div className="containerLi">
+          <li>
+          <input type="checkbox" className={`${props.completed && "todoDone"}`}></input>
+          <p className={`${props.completed && "todoDone"}`}>{props.text}</p>
+        </li>
+        <span className="x">❌</span>
+      </div>
+
     );
   }
 

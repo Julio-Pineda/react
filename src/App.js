@@ -14,16 +14,31 @@ const defaultTodos = [
   {text: 'Llorar con la llorona', completed: false},
   {text: 'Pelar el cobre', completed: false},
   {text: 'Tomar la cena', completed: false},
+  {text: 'Estados derivados', completed: false},
 ];
 
 function App() {
+  const [tareas, setTareas] = React.useState(defaultTodos); 
+  console.log ("Se buscó: " + tareas);
+
+  const completedTareas = tareas.filter(
+    tarea => !!tareas.completed
+  ).length;
+  const totalTareas = tareas.length;
+
+  const [searchValue, setSearchValue] = React.useState(""); 
+  console.log ("Se buscó: " + searchValue);
+
   return (
     // <div className="App"> Puedo encapsular en div
     // <React.Fragment> Puedo encapsular en react fragment o puedo simplemente usar esas etiquetas vacias para encapsular
     // <>
     <div className="App">
-      <TodoCounter completed={10} total={12}/>
-      <TodoSearch/>
+      <TodoCounter completed={completedTareas} total={totalTareas}/>
+      <TodoSearch
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      />
 
       <TodoList>
         {defaultTodos.map(todo => (

@@ -7,7 +7,6 @@
   justify-content: center;
   font-family: Roboto, sans-serif;
   width: 444px;
-  height: auto;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 6.5px );
@@ -16,4 +15,8 @@
   -webkit-box-shadow: 3px 14px 22px 4px rgba(194, 194, 194, 0.62);
   -moz-box-shadow: 3px 14px 22px 4px rgba(194, 194, 194, 0.62);
   box-shadow: 3px 14px 22px 4px rgba(194, 194, 194, 0.62);
+}
+
+.todoDone {
+  text-decoration: line-through;
 }
