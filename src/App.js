@@ -14,7 +14,7 @@ const defaultTodos = [
   {text: 'Llorar con la llorona', completed: false},
   {text: 'Pelar el cobre', completed: false},
   {text: 'Tomar la cena', completed: false},
-  {text: 'Estados derivados', completed: false},
+  {text: 'Estados derivados', completed: true},
 ];
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
   console.log ("Se buscó: " + tareas);
 
   const completedTareas = tareas.filter(
-    tarea => !!tareas.completed
+    tarea => !!tarea.completed
   ).length;
   const totalTareas = tareas.length;
 
