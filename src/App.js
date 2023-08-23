@@ -18,6 +18,8 @@ const defaultTodos = [
 ];
 
 function App() {
+  const [searchValue, setSearchValue] = React.useState(""); 
+
   const [tareas, setTareas] = React.useState(defaultTodos); 
   console.log ("Se buscó: " + tareas);
 
@@ -26,7 +28,15 @@ function App() {
   ).length;
   const totalTareas = tareas.length;
 
-  const [searchValue, setSearchValue] = React.useState(""); 
+  const searchedTareas = tareas.filter(
+    (tarea) => {
+      const tareaText = tarea.text.toLocaleLowerCase();
+      const searchText = searchValue.toLocaleLowerCase();
+      
+      return tareaText.includes(searchText);
+    }
+  );
+
   console.log ("Se buscó: " + searchValue);
 
   return (
@@ -41,7 +51,7 @@ function App() {
       />
 
       <TodoList>
-        {defaultTodos.map(todo => (
+        {searchedTareas.map(todo => (
           <TodoItem 
           key={todo.text} 
           text={todo.text}
