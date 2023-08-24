@@ -26,11 +26,11 @@ li {
     box-sizing: border-box;
 }
 
-li input {
+.chulo {
     padding: 0;
-    margin: 0 4px;
+    margin: 0 15px;
     width: 14px;
-    
+    cursor: pointer;
 }
 
 li:hover {

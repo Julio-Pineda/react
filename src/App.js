@@ -32,19 +32,40 @@ function App() {
     (tarea) => {
       const tareaText = tarea.text.toLocaleLowerCase();
       const searchText = searchValue.toLocaleLowerCase();
-      
+
       return tareaText.includes(searchText);
     }
   );
 
-  console.log ("Se buscó: " + searchValue);
+    const tareaCompletadaTodoList = (text) => {
+      const newTareas = [...tareas];
+      const tareaIndex = newTareas.findIndex(
+        (todo) => todo.text == text
+      );
+      newTareas[tareaIndex].completed = !newTareas[tareaIndex].completed; // Toggle the completed value
+      setTareas(newTareas);
+    }
+
+    const tareaEliminadaTodoList = (text) => {
+      const newTareas = [...tareas];
+      const tareaIndex = newTareas.findIndex(
+        (todo) => todo.text == text
+      );
+      newTareas.splice(tareaIndex, 1);
+      setTareas(newTareas);
+    }
+
 
   return (
     // <div className="App"> Puedo encapsular en div
     // <React.Fragment> Puedo encapsular en react fragment o puedo simplemente usar esas etiquetas vacias para encapsular
     // <>
     <div className="App">
-      <TodoCounter completed={completedTareas} total={totalTareas}/>
+      <TodoCounter 
+      completed={completedTareas} 
+      total={totalTareas}
+      />
+      
       <TodoSearch
       searchValue={searchValue}
       setSearchValue={setSearchValue}
@@ -56,11 +77,15 @@ function App() {
           key={todo.text} 
           text={todo.text}
           completed={todo.completed}
+          onComplete={() => tareaCompletadaTodoList(todo.text)}
+          onDelete={() => tareaEliminadaTodoList(todo.text)}
           />
         ))}
       </TodoList>
 
-       <TodoButton />
+       <TodoButton 
+
+       />
     </div>
     //   </>
     // </React.Fragment>
